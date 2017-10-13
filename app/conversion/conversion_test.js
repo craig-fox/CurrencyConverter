@@ -1,10 +1,10 @@
 'use strict';
 
-describe('converterApp.view1 module', function() {
+describe('converterApp.conversion module', function() {
 
-  beforeEach(module('converterApp.view1'));
+  beforeEach(module('converterApp.conversion'));
 
-  describe('view1 controller', function(){
+  describe('conversion controller', function(){
 
     it('should ....', inject(function($controller) {
       //spec body
