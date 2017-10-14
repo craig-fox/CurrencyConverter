@@ -25,13 +25,15 @@
             </div>
             <div class="row">
                 <div class="col-xs-6 col-sm-6">
-                    <label for="base">Base Amount</label>
-                    <input type="number" class="form-control" id="base" name="base" ng-model="vm.formData.baseAmount"  />
+                    <label for="base">{{vm.formData.source}}</label>
+                    <input type="text" class="form-control" id="base" name="base"
+                           ng-model="vm.formData.baseAmount" placeholder="Enter amount" />
                 </div>
                 <div class="col-xs-6 col-sm-6">
-                    <label for="converted">Converted Amount</label>
-                    <input type="number" class="form-control" id="converted" name="converted"
+                    <label for="converted">{{vm.formData.target}}</label>
+                    <input type="text" class="form-control" id="converted" name="converted"
                            ng-model="vm.formData.convertedAmount"  />
+
                 </div>
             </div>
 

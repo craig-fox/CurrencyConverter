@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('converterApp')
+        .module('converterApp.conversion')
         .factory('conversionService', conversionService);
 
     conversionService.$inject = ['$http'];
