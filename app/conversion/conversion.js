@@ -25,14 +25,9 @@
         }
 
     }])
-        .controller('ConversionController', ['conversionService', function (conversionService) {
+        .controller('ConversionController', ['conversionService', 'CURRENCIES', function (conversionService, CURRENCIES) {
             var vm = this;
-            vm.currencies = [{'id': 1, 'code': 'NZD', 'name': 'New Zealand Dollar'},
-                {'id': 2, 'code': 'AUD', 'name': 'Australian Dollar'},
-                {'id': 3, 'code': 'USD', 'name': 'United States Dollar'},
-                {'id': 4, 'code': 'GBP', 'name': 'British Pound'},
-                {'id': 5, 'code': 'JPY', 'name': 'Japanese Yen'},
-                {'id': 6, 'code': 'EUR', 'name': 'Euro'}];
+            vm.currencies = CURRENCIES;
             vm.formData = {};
             vm.formData.source = '';
             vm.formData.target = '';

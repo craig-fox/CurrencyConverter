@@ -4,7 +4,7 @@
 angular.module('converterApp', [
   'ngRoute',
   'converterApp.conversion',
-  'converterApp.view2',
+  'converterApp.history',
   'converterApp.version'
 ]).
 config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
