@@ -1,24 +1,41 @@
-<h1>Angular Currency Converter</h1>
-<form id="convert" ng-submit="vm.onConvert()">
-    <div class="form-group">
-        <button type="submit" class="btn-info">Convert</button>
-    </div>
-    <div class="form-group">
-        <div class="col-xs-6 col-sm-6">
-            <label for="source">Source currency type</label>
-            <select id="source" name="source" required="required"
-                    ng-options="opt.code as opt.name for opt in vm.currencies track by opt.id"
-                    ng-model="vm.formData.source" class="form-control">
-               {{item.name}}
-            </select>
+<div class="container-fluid container-fullw padding-bottom-10">
+    <h1>Angular Currency Converter</h1>
+    <form id="convert" ng-submit="vm.onConvert()">
+        <div class="form-group">
+            <button type="submit" class="btn-info">Convert</button>
         </div>
-        <div class="col-xs-6 col-sm-6">
-            <label for="target">Target currency type</label>
-            <select id="target" name="target" required="required"
-                    ng-options="opt.code as opt.name for opt in vm.currencies track by opt.id"
-                    ng-model="vm.formData.target" class="form-control">
+        <div class="form-group">
+            <div class="row">
+                <div class="col-xs-6 col-sm-6">
+                    <label for="source">Source currency type</label>
+                    <select id="source" name="source" required="required"
+                            ng-options="opt.code as opt.name for opt in vm.currencies track by opt.id"
+                            ng-model="vm.formData.source" class="form-control">
+                        {{item.name}}
+                    </select>
+                </div>
+                <div class="col-xs-6 col-sm-6">
+                    <label for="target">Target currency type</label>
+                    <select id="target" name="target" required="required"
+                            ng-options="opt.code as opt.name for opt in vm.currencies track by opt.id"
+                            ng-model="vm.formData.target" class="form-control">
 
-            </select>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-6 col-sm-6">
+                    <label for="base">Base Amount</label>
+                    <input type="number" class="form-control" id="base" name="base" ng-model="vm.formData.baseAmount"  />
+                </div>
+                <div class="col-xs-6 col-sm-6">
+                    <label for="converted">Converted Amount</label>
+                    <input type="number" class="form-control" id="converted" name="converted"
+                           ng-model="vm.formData.convertedAmount"  />
+                </div>
+            </div>
+
         </div>
-    </div>
-</form>
+    </form>
+</div>
+
