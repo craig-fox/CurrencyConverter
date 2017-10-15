@@ -4,7 +4,7 @@ describe('converterApp.history module', function() {
 
   beforeEach(module('converterApp.history'));
 
-  describe('history controller', function(){
+  describe('HistoryController', function(){
 
     it('should ....', inject(function($controller) {
       //spec body

@@ -4,10 +4,9 @@ describe('converterApp.conversion module', function() {
 
   beforeEach(module('converterApp.conversion'));
 
-  describe('conversion controller', function(){
+  describe('ConversionController', function(){
 
-    it('should ....', inject(function($controller) {
-      //spec body
+    it('should be defined', inject(function($controller) {
       var conversionController = $controller('ConversionController');
       expect(conversionController).toBeDefined();
     }));

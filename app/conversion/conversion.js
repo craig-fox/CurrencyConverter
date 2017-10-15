@@ -36,6 +36,9 @@
                 if(!vm.formData.baseAmount || vm.formData.source === '' || vm.formData.target === ''){
                     console.log("Must select currency types and base amount");
                     return;
+                } else if (vm.formData.source === vm.formData.target){
+                    console.log("Must select different currency types");
+                    return;
                 }
 
                 conversionService.getExchangeRate(vm.formData.source)
